@@ -15,7 +15,7 @@ xhrBTN.addEventListener('click', function(){
         }
     }
     
-    XHR.open('GET', 'https://ron-swanson-quotes.herokuapp.com/v2/quotes'); 
+    XHR.open('GET', url); 
     XHR.send();
 })
 
@@ -55,7 +55,7 @@ $( document ).ready(function() {
     //jquery starts here
     
     $('#jquery').click(function(){
-        $.getJSON('https://ron-swanson-quotes.herokuapp.com/v2/quotes').done(function(data){
+        $.getJSON(url).done(function(data){
         $("#quote").text(data)
     }).fail(function(err){
         console.log('there was ' + err)
